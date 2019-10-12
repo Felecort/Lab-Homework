@@ -19,7 +19,7 @@ def iteration(idd):
 		else: pass
 
 
-#Заполнение массива данными
+#Заполнение массива данными(идентификаторами / хламом)
 for i in range(c):
 	a = random.randint(3000, 7000)
 	idd.append(a)
