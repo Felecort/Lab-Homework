@@ -3,23 +3,29 @@
 # квадратный корень вещественного числа с помощью поиска.
 
 
+def calculator(a):
+	
+	#проверка, являчется ли число положительным 
+	assert a >= 0
+	#определение количества знаков после запятой
+	s = str(a)
+	if '.' in s:
+	    lenght =  abs(s.find('.') - len(s)) - 1
+	else:
+		lenght = 0 
+	if lenght % 2 != 0:
+		lenght += 1
+	#перевод вещественного числа в натуральное
+	a10 = a * (10 ** lenght)
+	a10 = int(a10)
+	#вычисление корня с помощью поиска
+	j = 0
+	sqrt = 0
+	while j != 1:
+		if (sqrt * sqrt)<= a10 and ((sqrt + 1) * (sqrt + 1)) > a10:
+			j = 1
+		else: sqrt += 1
+	sqrt = sqrt / ((10 ** (lenght / 2)))
+	return(sqrt)
 
-def fraction(number):
-    s = str(number)
-    if '.' in s:
-        return abs(s.find('.') - len(s)) - 1
-    else:
-        return 0
-def sqrt(a_power_10, a, num):
-	squares = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-	for j in range(round(len(str(a))/2)):
-		a_count = a_power_10 // 10**(num + 1)
-		for i in range(10):
-			if a_count > squares[i-1] and a_count < squares[i]:
-				print(a_count, "   ", i) 
-		num = num - 1
-
-
-a = 3743.215610
-num = fraction(a)
-sqrt(a * 10**num, a, num)
+print(calculator(123455.563211))
