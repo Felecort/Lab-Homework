@@ -9,7 +9,6 @@ def multiplication(a, b):
 		z = a
 		a = b
 		b = z
-	print(a, b)
 	bb = b
 	num = 0
 	c = 1
