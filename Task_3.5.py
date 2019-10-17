@@ -35,12 +35,12 @@ def calculator(a, b):
 		return multiplication(a, b)
 	elif a < 0 or b < 0:
 		a = abs(a)
-		b = abs(a)
+		b = abs(b)
 		return -multiplication(a, b)
 
 
-		
-print("результат произведеня =", calculator(50000, 200))
+
+print("результат произведеня =", calculator(-4894564, 54948654))
 
 
 
