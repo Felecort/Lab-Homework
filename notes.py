@@ -27,3 +27,8 @@ print("--- %s seconds ---" % (time.time() - start_time))
 
 pyinstaller -F 
 raise SystemExit
+
+print ('Завершение программы через 3 секунд')
+for i in range(3,0,-1):
+	time.sleep(1)
+	print (i)
