@@ -1,3 +1,4 @@
+
 def determinant(p):
 	T = 1
 	lst = list(p)
