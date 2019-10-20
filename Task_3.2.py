@@ -8,23 +8,23 @@
 #когда планеты выстроены в одну линию. Напишите программу, которая 
 #вычисляет как часто вы можете отправлять отчеты на Землю. Напишите 
 #тесты на asserts.
-# Подсказка
-#Можно ли свести задачу к решению через алгоритм Евклида?
+
+#Вычисление Наибольшего Общего делителя 
+def Euclidean_Algorithm(a, NOD):
+	while a != NOD:
+		if a > NOD:
+			a = a - NOD
+		else:
+			NOD = NOD - a
+	return NOD
+
+#Вычисление наименьшего общего кратного по формуле a*b/nod(a,b)
 def Parade_of_Planets(m, k, l):
 	assert m > 0
 	assert k > 0
 	assert l > 0
-	#Алгоритм Евклида
-	def Euclidean_Algorithm(a, b):
-		while a != b:
-			if a > b:
-				a = a - b
-			else:
-				b = b - a
-		return b
-	print((((m * k) / Euclidean_Algorithm(m, k) * l) / Euclidean_Algorithm(k, l)))
-	# более читабельный для человека вариант:
-	#q = (m * k) / Euclidean_Algorithm(m, k)
-	#w = Euclidean_Algorithm(k, l)
-	#print( q * l / w)
-Parade_of_Planets(36, 12, 24)
+	NOK_mk = m * k /  Euclidean_Algorithm(m, k)
+	NOK_kl = k * l / Euclidean_Algorithm(k, l)
+	NOK_3 = NOK_mk * NOK_kl / Euclidean_Algorithm(NOK_mk, NOK_kl)
+	return print(NOK_3)
+Parade_of_Planets(36, 25, 24)
