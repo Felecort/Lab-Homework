@@ -7,7 +7,7 @@ def palindrom(text):
 	lst = list(text)
 	lenght = len(lst)
 	while lenght > i:
-		if lst[i] == " " or lst[i] == "." or lst[i] == "," or lst [i] == "!":
+		if lst[i] == " " or lst[i] == "." or lst[i] == "," or lst [i] == "!" or lst [i] == "?" or lst [i] == "-" or lst [i] == ":":
 			lst.pop(i)
 			lenght -= 1
 			i -= 1 
@@ -18,9 +18,9 @@ def palindrom(text):
 			lst.pop(-1)
 		else:
 			T = 0
-			return txt + "- не палиндром"
-	return txt + "- палиндром"
-print(palindrom("колесо.,!, жалко поклаж. оселок."))
+			return txt + " - не палиндром"
+	return txt + " - палиндром"
+print(palindrom("может речь чертежом."))
 
 
 
