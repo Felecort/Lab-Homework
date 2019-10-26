@@ -1,7 +1,7 @@
 # готовую библиотечную реализацию квадратного корня использовать 
 # nельзя. Напишите функцию, которая вычисляет 
 # квадратный корень вещественного числа с помощью поиска.
-
+import math
 
 def calculator(a):
 	
@@ -26,6 +26,10 @@ def calculator(a):
 			j = 1
 		else: sqrt += 1
 	sqrt = sqrt / ((10 ** (lenght / 2)))
-	return(sqrt)
+	return sqrt
 
-print(calculator(123455.563211))
+print(calculator(5000000))
+print(calculator(455.1554))
+print(calculator(56496))
+print(calculator(56444.564879))
+print(calculator(123.5164889))
