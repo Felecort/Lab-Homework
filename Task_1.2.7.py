@@ -1,5 +1,5 @@
 import time
-a = int(input("ввeдите число "))
+a = 100000000
 numbers = {}
 lst = []
 b = []
