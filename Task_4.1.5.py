@@ -23,9 +23,9 @@ def compiler(a):
 		elif a[i] == "}":
 			cB += 1
 		if P < cP or S < cS or B < cB:
-			return print("Ошибка компиляции: начало операции с закрытой скобки ")
+			return "false"
 	if P == cP and S == cS and B == cB: 
-		print("Компиляция прошла успешно ")
+		return "true"
 	else:
-		print("Ошибка компиляции: операция не определена ")
-compiler("()(){}[]()dsd()  (")
+		return "false"
+print(compiler("))"))
