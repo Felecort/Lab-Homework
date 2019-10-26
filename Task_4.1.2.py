@@ -1,27 +1,24 @@
 #(6 балла, Yandex) Перепишите функцию из №4.1.1 так, чтобы она проверяла 
 #на палиндромом строки. При этом проверяются только буквы и цифры, 
-#остальные символы надо пропускать. Напишите тесты.
+#остальные символы надо пропускать. Напишите тесты.isalnum
+
 def palindrom(text):
-	txt = text
+	assert text != ""
 	i = 0
-	lst = list(text)
-	lenght = len(lst)
-	while lenght > i:
-		if lst[i] == " " or lst[i] == "." or lst[i] == "," or lst [i] == "!" or lst [i] == "?" or lst [i] == "-" or lst [i] == ":":
-			lst.pop(i)
-			lenght -= 1
-			i -= 1 
-		i += 1
-	for j in range(lenght // 2):
-		if lst[0] == lst[-1]:
-			lst.pop(0)
-			lst.pop(-1)
-		else:
-			T = 0
-			return txt + " - не палиндром"
-	return txt + " - палиндром"
-print(palindrom("может речь чертежом."))
+	j = -1
+	while  i < len(text) // 2:
+		while text[i].isalnum() == False:
+			i += 1
+		while text[j].isalnum() == False:
+			j -= 1
+		if text[i] == text[j]:
+			i += 1
+			j -= 1
+		else: return False
+	return True
 
-
-
-
+print(palindrom("!@# $%^&*  lol&^l ol*")) 	#true
+print(palindrom("aa&*aa$(aa"))			#true
+print(palindrom("klll&*"))				#false
+print(palindrom("a1001a"))				#true
+print(palindrom("1212"))				#false
