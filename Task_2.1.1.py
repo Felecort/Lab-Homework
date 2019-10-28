@@ -5,32 +5,12 @@
 #ℹ️ Подсказка
 #Что будет, если сначала отсортировать?
 
-import random
-import time
-idd = []
-dub = []
-c = 10000
-
-#функция поиска повторяющихся элементов
-def iteration(idd):
-	for j in range(c-1):
-		if idd[j] == idd[j+1]:
-			dub.append(idd[j])
-		else: pass
-
-
-#Заполнение массива данными(идентификаторами / хламом)
-for i in range(c):
-	a = random.randint(3000, 7000)
-	idd.append(a)
-idd.sort()
-
-
-start_time = time.time ()
-iteration(idd)
-print("время поиска повторяющихся элементов = %s секунд" % (time.time() - start_time))
-
-
-dub.insert(0, "Имеются дубликаты идентификаторов:")
-print(dub)
-
+def iteration(list_of_identifiers):
+	duplicate_identifiers = []
+	for i in range(len(list_of_identifiers)-1):
+		if list_of_identifiers[i] == list_of_identifiers[i+1]:
+			duplicate_identifiers.append(list_of_identifiers[i])
+	return duplicate_identifiers
+list_of_identifiers = [100, 123, 545, 456, 452, 400, 100, 754, 400, 248]
+list_of_identifiers.sort()
+print("Дубликаты идентификаторов: ", iteration(list_of_identifiers))

@@ -44,7 +44,6 @@ print(binary(40099900, array))
 print("бинарный поиск 		%s seconds " % (time.time() - start_time))
 
 
-
 start_time = time.time()
 def interpolation(val, array):
     low = 0
