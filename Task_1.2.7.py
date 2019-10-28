@@ -1,5 +1,6 @@
 import time
-a = 100000000
+c = input("введите число ")
+a = 5000000
 numbers = {}
 lst = []
 b = []
