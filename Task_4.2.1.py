@@ -1,1 +1,1 @@
-print(dir("s".decode))
+print(dir("s".decode)) 

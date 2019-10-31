@@ -11,4 +11,4 @@ newsletter = []
 for i in range(1, 257):
 	newsletter.append(i)
 lenght = len(newsletter)
-print(lenght)
+print(lenght) 

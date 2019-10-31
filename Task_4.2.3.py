@@ -1,4 +1,4 @@
-class AB:
+class AB: 
     ab = {}
     def __init__(self, key, value):
         self.key = key
