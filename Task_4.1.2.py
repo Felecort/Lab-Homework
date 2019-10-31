@@ -19,4 +19,4 @@ print(palindrom("!@# $%^&*  lol&^l ol*")) 	#true
 print(palindrom("aa&*aa$(aa"))				#true
 print(palindrom("klll&*"))					#false
 print(palindrom("a1001a"))					#true
-print(palindrom("1212"))					#false	
+print(palindrom("1212"))					#false	  

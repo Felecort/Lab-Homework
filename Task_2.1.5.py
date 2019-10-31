@@ -8,7 +8,7 @@ def calculator(a):
 	s = str(a)
 	if '.' in s:
 	    length =  abs(s.find('.') - len(s)) - 1
-	else:
+	else: 
 		length = 0 
 	if length % 2 != 0:
 		length += 1

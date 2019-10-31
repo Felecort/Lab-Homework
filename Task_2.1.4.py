@@ -9,7 +9,7 @@ import random
 array = []
 start_time = time.time()
 for k in range(50000001):
-    array.append(k)
+    array.append(k) 
 print("время заполнения массива: %s seconds " % (time.time() - start_time))
 
 
