@@ -7,7 +7,7 @@ def multiplication(a, b):
 	if a > b:  
 		z = a
 		a = b
-		b = z
+		b = z 
 	bb = b
 	num = 0
 	c = 1

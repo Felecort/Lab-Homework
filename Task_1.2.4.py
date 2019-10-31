@@ -9,3 +9,4 @@ s3 = ( bx1>=ax1 and bx1<=ax2 ) or ( bx2>=ax1 and bx2<=ax2 )
 s4 = ( by1>=ay1 and by1<=ay2 ) or ( by2>=ay1 and by2<=ay2 )
 
 print( "yes" if ((s1 and s2) or (s3 and s4)) or ((s1 and s4) or (s3 and s2)) else "no" )
+ 

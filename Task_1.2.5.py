@@ -8,4 +8,4 @@ def rand(lcg):
 	print ("Нанесённый урон =", lcg)
 	return(lcg)
 for i in range(2):
-	rand(lcg)
+	rand(lcg) 

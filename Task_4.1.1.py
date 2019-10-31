@@ -21,7 +21,7 @@ for j in range(len(list(p))):
 	assert list(p)[j] != "+"
 determinant(p)
 
-
+ 
 
 #lol
 

@@ -12,7 +12,7 @@
 #Вычисление Наибольшего Общего делителя 
 def Euclidean_Algorithm(a, NOD):
 	while a != NOD:
-		if a > NOD:
+		if a > NOD: 
 			a = a - NOD
 		else:
 			NOD = NOD - a

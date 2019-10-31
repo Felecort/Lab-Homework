@@ -14,4 +14,4 @@ def iteration(list_of_identifiers):
 list_of_identifiers = [475,45,95,7,46,43,1,978,897,24,4987,98,75,15,36,85,132,94,25,74,22,565]
 list_of_identifiers.sort()
 print("Дубликаты идентификаторов: ", iteration(list_of_identifiers))
-  
+   

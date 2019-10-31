@@ -6,7 +6,7 @@ def Conversion():
 		number = N % 10
 		if number == 1:
 			date.append ("один")
-		elif number == 2:
+		elif number == 2: 
 			date.append ("два")
 		elif number == 3:
 			date.append ("три")
