@@ -1,0 +1,8 @@
+*.jp?g
+*.png
+*.gif
+*.svg
+*.pdf
+*.xls?
+
+*/
