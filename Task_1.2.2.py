@@ -1,9 +1,20 @@
-factorial = int( input("Введите количество команд ") )
-fact2 = factorial - 3
+"""
+(1 балл) На чемпионате The Internetional в следующем году
+будет участвовать много команд. Сколько существует вариантов
+распределить первые три места? А все места? Напишите функцию,
+которая вычисляет эти значения.
+"""
+
+
 def fact(n):
-    if n == 0: 
-        return 1
-    else:
-        return n * fact(n-1)
-print("количесвто вариантов распределения всем местам = ", str(fact(factorial)) )
-print("количесвто вариантов распределения первым 3м местам= ", (fact(factorial)/fact(fact2)))
+    factorial = 1
+    for i in range(2, n + 1):
+        factorial *= i
+    return factorial
+
+if __name__ == "__main__":
+    count_comands = 12
+    fact2 = count_comands - 3
+
+    print("Варианты распределения всем местам:", fact(count_comands))
+    print("Варианты распределения первым 3м местам:", (fact(count_comands) // fact(fact2)))
